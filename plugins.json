@@ -1,0 +1,138 @@
+[
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=animehay.my&sz=%size%",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/stealer-smile/extension",
+        "fileSize": 12117,
+        "status": 1,
+        "language": "vi",
+        "authors": [
+            "Hung Trinh"
+        ],
+        "tvTypes": [
+            "OVA",
+            "AnimeMovie",
+            "Anime"
+        ],
+        "version": 2,
+        "internalName": "AnimeHay",
+        "url": "https://raw.githubusercontent.com/stealer-smile/extension/builds/AnimeHay.cs3",
+        "name": "AnimeHay"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=hhpanda.website&sz=%size%",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/stealer-smile/extension",
+        "fileSize": 13740,
+        "status": 1,
+        "language": "vi",
+        "authors": [
+            "Hung Trinh"
+        ],
+        "tvTypes": [
+            "OVA",
+            "Anime"
+        ],
+        "version": 3,
+        "internalName": "HHPanda",
+        "url": "https://raw.githubusercontent.com/stealer-smile/extension/builds/HHPanda.cs3",
+        "name": "HHPanda"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=vtvgo.vn&sz=%size%",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/stealer-smile/extension",
+        "fileSize": 15452,
+        "status": 1,
+        "language": "vi",
+        "authors": [
+            "Hung Trinh"
+        ],
+        "tvTypes": [
+            "Live"
+        ],
+        "version": 3,
+        "internalName": "IPTVPlayer",
+        "description": "Truyen Hinh VTV",
+        "url": "https://raw.githubusercontent.com/stealer-smile/extension/builds/IPTVPlayer.cs3",
+        "name": "IPTVPlayer"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=motchilltv.my&sz=%size%",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/stealer-smile/extension",
+        "fileSize": 15024,
+        "status": 1,
+        "language": "vi",
+        "authors": [
+            "Hung Trinh"
+        ],
+        "tvTypes": [
+            "TvSeries",
+            "Movie"
+        ],
+        "version": 2,
+        "internalName": "Motchilltv",
+        "url": "https://raw.githubusercontent.com/stealer-smile/extension/builds/Motchilltv.cs3",
+        "name": "Motchilltv"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=phim.nguonc.com&sz=%size%",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/stealer-smile/extension",
+        "fileSize": 19043,
+        "status": 1,
+        "language": "vi",
+        "authors": [
+            "Hung Trinh"
+        ],
+        "tvTypes": [
+            "Anime",
+            "TvSeries"
+        ],
+        "version": 1,
+        "internalName": "NguonC",
+        "url": "https://raw.githubusercontent.com/stealer-smile/extension/builds/NguonC.cs3",
+        "name": "NguonC"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=ophim17.cc&sz=%size%",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/stealer-smile/extension",
+        "fileSize": 18827,
+        "status": 1,
+        "language": "vi",
+        "authors": [
+            "Hung Trinh"
+        ],
+        "tvTypes": [
+            "Anime",
+            "TvSeries"
+        ],
+        "version": 3,
+        "internalName": "OPhim",
+        "url": "https://raw.githubusercontent.com/stealer-smile/extension/builds/OPhim.cs3",
+        "name": "OPhim"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=phimmoichill3.net&sz=%size%",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/stealer-smile/extension",
+        "fileSize": 15149,
+        "status": 1,
+        "language": "vi",
+        "authors": [
+            "Hung Trinh"
+        ],
+        "tvTypes": [
+            "AsianDrama",
+            "Anime",
+            "TvSeries",
+            "Movie"
+        ],
+        "version": 1,
+        "internalName": "Phimmoichill",
+        "url": "https://raw.githubusercontent.com/stealer-smile/extension/builds/Phimmoichill.cs3",
+        "name": "Phimmoichill"
+    }
+]
