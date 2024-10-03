@@ -1,4 +1,4 @@
-name: Sync Repos
+name: Copy and Sync Builds Branch
 
 on:
   schedule:
@@ -9,32 +9,28 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository (repo nguồn)
+      - name: Checkout repo 1 (workflow repo)
         uses: actions/checkout@v2
         with:
           persist-credentials: false
           fetch-depth: 0
-          ref: builds-2  # Checkout nhánh builds-2 từ repo nguồn
 
       - name: Set up Git
         run: |
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
 
-      - name: Add upstream repository (repo đích)
-        run: git remote add destination https://github.com/stealer-smile/extension.git
-
-      - name: Fetch destination repo
-        run: git fetch destination
-
-      - name: Merge changes from source to destination
+      - name: Add repo 2 as remote
         run: |
-          git checkout builds-2
-          git merge destination/builds-2 --ff-only || echo "No changes to merge"
+          git remote add repo2 https://github.com/stealer-smile/extension.git  # Thêm repo 2 vào
 
-      - name: Push changes to destination repo builds-2
+      - name: Fetch builds branch from repo 2
+        run: git fetch repo2 builds  # Lấy nhánh builds từ repo 2
+
+      - name: Checkout builds branch from repo 2
+        run: git checkout -b builds repo2/builds  # Checkout nhánh builds từ repo 2
+
+      - name: Push to builds branch in repo 1
         env:
-          GITHUB_TOKEN: ${{ secrets.TOKEN }}  # Sử dụng token để đẩy code lên repository đích
-        run: |
-          git remote set-url destination https://oauth2:${{ secrets.TOKEN }}@github.com/stealer-smile/extension.git
-          git push destination builds-2 --force
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Token cho repo 1
+        run: git push origin builds --force  # Đẩy lên nhánh builds của repo 1
