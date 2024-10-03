@@ -32,7 +32,7 @@ jobs:
 
       - name: Update URLs in plugins.json
         run: |
-          cd $GITHUB_WORKSPACE/builds
+#          cd $GITHUB_WORKSPACE/builds
           sed -i.bak 's|builds/|builds-2/|g' plugins.json
           rm plugins.json.bak
 
