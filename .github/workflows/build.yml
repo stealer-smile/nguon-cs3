@@ -44,9 +44,16 @@ jobs:
           echo "After update:"
           cat plugins.json
 
+      - name: Add updated plugins.json
+        run: git add plugins.json
+
+      - name: Commit changes
+        run: git commit -m "Update URLs in plugins.json"
+
       - name: Push to builds branch in repo 1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Token cho repo 1
         run: |
           git remote set-url origin https://oauth2:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
           git push origin builds --force  # Đẩy lên nhánh builds của repo 1
+      
