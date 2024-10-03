@@ -22,7 +22,8 @@ jobs:
 
       - name: Add repo 2 as remote
         run: |
-          git remote add repo2 https://github.com/stealer-smile/extension.git  # Thêm repo 2 vào
+          git remote add repo2 https://oauth2:${{ secrets.TOKEN }}@github.com/stealer-smile/extension.git  # Thêm repo 2 vào với token
+
 
       - name: Fetch builds branch from repo 2
         run: git fetch repo2 builds  # Lấy nhánh builds từ repo 2
