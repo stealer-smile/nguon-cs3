@@ -31,6 +31,8 @@ jobs:
         run: git checkout -b builds repo2/builds  # Checkout nhánh builds từ repo 2
 
       - name: Push to builds branch in repo 1
-#        env:
-#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Token cho repo 1
-        run: git push origin builds --force  # Đẩy lên nhánh builds của repo 1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Token cho repo 1
+        run: |
+          git remote set-url origin https://oauth2:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+          git push origin builds --force  # Đẩy lên nhánh builds của repo 1
