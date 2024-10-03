@@ -30,6 +30,12 @@ jobs:
       - name: Checkout builds branch from repo 2
         run: git checkout -b builds repo2/builds  # Checkout nhánh builds từ repo 2
 
+      - name: Update URLs in plugins.json
+        run: |
+          cd $GITHUB_WORKSPACE/builds
+          sed -i.bak 's|builds/|builds-2/|g' plugins.json
+          rm plugins.json.bak
+
       - name: Push to builds branch in repo 1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Token cho repo 1
