@@ -1,4 +1,4 @@
-name: Sync Fork
+name: Sync Repos
 
 on:
   schedule:
@@ -9,34 +9,32 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
+      - name: Checkout repository (repo nguồn)
         uses: actions/checkout@v2
         with:
           persist-credentials: false
           fetch-depth: 0
-          # Checkout nhánh builds-2 của repo fork
-          ref: builds-2
+          ref: builds-2  # Checkout nhánh builds-2 từ repo nguồn
 
       - name: Set up Git
         run: |
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
 
-      - name: Add upstream repository
-        run: git remote add upstream https://github.com/stealer-smile/extension.git
+      - name: Add upstream repository (repo đích)
+        run: git remote add destination https://github.com/stealer-smile/extension.git
 
-      - name: Fetch upstream
-        run: git fetch upstream
+      - name: Fetch destination repo
+        run: git fetch destination
 
-      - name: Checkout upstream builds-2
-        run: git checkout -B builds-2 upstream/builds-2
-
-      - name: Merge upstream changes into local builds-2
+      - name: Merge changes from source to destination
         run: |
           git checkout builds-2
-          git merge upstream/builds-2 --ff-only || echo "No changes to merge"
+          git merge destination/builds-2 --ff-only || echo "No changes to merge"
 
-      - name: Push changes to fork builds-2
+      - name: Push changes to destination repo builds-2
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Sử dụng token để đẩy code lên repository fork
-        run: git push origin builds-2
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}  # Sử dụng token để đẩy code lên repository đích
+        run: |
+          git remote set-url destination https://oauth2:${{ secrets.TOKEN }}@github.com/stealer-smile/extension.git
+          git push destination builds-2 --force
