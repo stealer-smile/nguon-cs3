@@ -30,9 +30,19 @@ jobs:
       - name: Checkout builds branch from repo 2
         run: git checkout -b builds repo2/builds  # Checkout nhánh builds từ repo 2
 
+      - name: Check contents of plugins.json before update
+        run: |
+          echo "Before update:"
+          cat plugins.json
+
       - name: Update URLs in plugins.json
         run: |
           sed -i 's|builds/|builds-2/|g' plugins.json
+
+      - name: Check contents of plugins.json after update
+        run: |
+          echo "After update:"
+          cat plugins.json
 
       - name: Push to builds branch in repo 1
         env:
