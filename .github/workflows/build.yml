@@ -32,8 +32,7 @@ jobs:
 
       - name: Update URLs in plugins.json
         run: |
-          sed -i.bak 's|builds/|builds-2/|g' plugins.json
-          rm plugins.json.bak
+          sed -i 's|builds/|builds-2/|g' plugins.json
 
       - name: Push to builds branch in repo 1
         env:
