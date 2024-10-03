@@ -2,7 +2,7 @@ name: Copy and Sync Builds Branch
 
 on:
   schedule:
-    - cron: '0 0 * * 0' # Chạy mỗi tuần một lần
+  - cron: '0 0 * * *' # Chạy mỗi ngày một lần vào lúc 0 giờ
   workflow_dispatch: # Cho phép chạy thủ công
 
 jobs:
@@ -37,7 +37,7 @@ jobs:
 
       - name: Update URLs in plugins.json
         run: |
-          sed -i 's|builds/|builds-2/|g' plugins.json
+          sed -i 's|extension/|nguon-cs3/|g' plugins.json
 
       - name: Check contents of plugins.json after update
         run: |
