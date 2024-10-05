@@ -1,0 +1,50 @@
+name: Copy and Sync Builds-2 Branch
+
+on:
+  schedule:
+  - cron: '0 0 * * *' # Chạy mỗi ngày một lần vào lúc 0 giờ
+  workflow_dispatch: # Cho phép chạy thủ công
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo 1 (workflow repo)
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+
+      - name: Set up Git
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+
+      - name: Add repo 2 as remote
+        run: |
+          git remote add repo2 https://oauth2:${{ secrets.TOKEN }}@github.com/stealer-smile/extension.git  # Thêm repo 2 vào với token
+
+
+      - name: Fetch builds-2 branch from repo 2
+        run: git fetch repo2 builds-2  # Lấy nhánh builds từ repo 2
+
+      - name: Checkout builds-2 branch from repo 2
+        run: git checkout -b builds repo2/builds-2  # Checkout nhánh builds từ repo 2
+     
+      - name: Update URLs in plugins.json
+        run: |
+          sed -i 's|extension/|nguon-cs3/|g' plugins.json
+
+      - name: Add updated plugins.json
+        run: git add plugins.json
+
+      - name: Commit changes
+        run: git commit -m "Update URLs in plugins.json"
+
+      - name: Push to builds branch in repo 1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Token cho repo 1
+        run: |
+          git remote set-url origin https://oauth2:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+          git push origin builds-2 --force  # Đẩy lên nhánh builds của repo 1
+      
