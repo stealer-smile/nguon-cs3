@@ -1,0 +1,8 @@
+{
+  "name": "extension-repo",
+  "description": "extension-repo",
+  "manifestVersion": 1,
+  "pluginLists": [
+    "https://raw.githubusercontent.com/stealer-smile/nguon-cs3/builds-2/plugins.json"
+  ]
+}
