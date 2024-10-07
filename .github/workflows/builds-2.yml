@@ -1,4 +1,4 @@
-name: Copy and Sync Builds Branch
+name: Copy and Sync Builds-2 Branch
 
 on:
   schedule:
