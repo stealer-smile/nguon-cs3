@@ -1,4 +1,4 @@
-name: Copy and Sync Builds-2 Branch
+name: Copy and Sync Builds Branch
 
 on:
   schedule:
@@ -24,16 +24,25 @@ jobs:
         run: |
           git remote add repo2 https://oauth2:${{ secrets.TOKEN }}@github.com/stealer-smile/extension.git  # Thêm repo 2 vào với token
 
-
       - name: Fetch builds-2 branch from repo 2
-        run: git fetch repo2 builds-2  # Lấy nhánh builds từ repo 2
+        run: git fetch repo2 builds-2  # Lấy nhánh builds-2 từ repo 2
 
       - name: Checkout builds-2 branch from repo 2
-        run: git checkout -b builds repo2/builds-2  # Checkout nhánh builds từ repo 2
-     
+        run: git checkout -b builds-2 repo2/builds-2  # Checkout nhánh builds-2 từ repo 2
+
+      - name: Check contents of plugins.json before update
+        run: |
+          echo "Before update:"
+          cat plugins.json
+
       - name: Update URLs in plugins.json
         run: |
           sed -i 's|extension/|nguon-cs3/|g' plugins.json
+
+      - name: Check contents of plugins.json after update
+        run: |
+          echo "After update:"
+          cat plugins.json
 
       - name: Add updated plugins.json
         run: git add plugins.json
@@ -41,10 +50,9 @@ jobs:
       - name: Commit changes
         run: git commit -m "Update URLs in plugins.json"
 
-      - name: Push to builds branch in repo 1
+      - name: Push to builds-2 branch in repo 1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Token cho repo 1
         run: |
           git remote set-url origin https://oauth2:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
-          git push origin builds-2 --force  # Đẩy lên nhánh builds của repo 1
-      
+          git push origin builds-2 --force  # Đẩy lên nhánh builds-2 của repo 1
