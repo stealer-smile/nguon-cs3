@@ -16,7 +16,7 @@
         ],
         "version": 1,
         "internalName": "AnimeHay",
-        "url": "https://raw.githubusercontent.com/stealer-smile/extension/builds-2/AnimeHay.cs3",
+        "url": "https://raw.githubusercontent.com/stealer-smile/nguon-cs3/builds-2/AnimeHay.cs3",
         "name": "AnimeHay"
     },
     {
@@ -35,7 +35,7 @@
         ],
         "version": 2,
         "internalName": "HHPanda",
-        "url": "https://raw.githubusercontent.com/stealer-smile/extension/builds-2/HHPanda.cs3",
+        "url": "https://raw.githubusercontent.com/stealer-smile/nguon-cs3/builds-2/HHPanda.cs3",
         "name": "HHPanda"
     },
     {
@@ -54,7 +54,7 @@
         ],
         "version": 1,
         "internalName": "HHTQ_TEAM",
-        "url": "https://raw.githubusercontent.com/stealer-smile/extension/builds-2/HHTQ_TEAM.cs3",
+        "url": "https://raw.githubusercontent.com/stealer-smile/nguon-cs3/builds-2/HHTQ_TEAM.cs3",
         "name": "HHTQ_TEAM"
     },
     {
@@ -73,7 +73,7 @@
         "version": 3,
         "internalName": "IPTVPlayer",
         "description": "Truyen Hinh VTV",
-        "url": "https://raw.githubusercontent.com/stealer-smile/extension/builds-2/IPTVPlayer.cs3",
+        "url": "https://raw.githubusercontent.com/stealer-smile/nguon-cs3/builds-2/IPTVPlayer.cs3",
         "name": "IPTVPlayer"
     },
     {
@@ -93,7 +93,7 @@
         ],
         "version": 4,
         "internalName": "KKPhim",
-        "url": "https://raw.githubusercontent.com/stealer-smile/extension/builds-2/KKPhim.cs3",
+        "url": "https://raw.githubusercontent.com/stealer-smile/nguon-cs3/builds-2/KKPhim.cs3",
         "name": "KKPhim"
     },
     {
@@ -112,7 +112,7 @@
         ],
         "version": 3,
         "internalName": "Motchilltv",
-        "url": "https://raw.githubusercontent.com/stealer-smile/extension/builds-2/Motchilltv.cs3",
+        "url": "https://raw.githubusercontent.com/stealer-smile/nguon-cs3/builds-2/Motchilltv.cs3",
         "name": "Motchilltv"
     },
     {
@@ -131,7 +131,7 @@
         ],
         "version": 2,
         "internalName": "NguonC",
-        "url": "https://raw.githubusercontent.com/stealer-smile/extension/builds-2/NguonC.cs3",
+        "url": "https://raw.githubusercontent.com/stealer-smile/nguon-cs3/builds-2/NguonC.cs3",
         "name": "NguonC"
     },
     {
@@ -150,7 +150,7 @@
         ],
         "version": 1,
         "internalName": "OPhim",
-        "url": "https://raw.githubusercontent.com/stealer-smile/extension/builds-2/OPhim.cs3",
+        "url": "https://raw.githubusercontent.com/stealer-smile/nguon-cs3/builds-2/OPhim.cs3",
         "name": "OPhim"
     },
     {
@@ -171,7 +171,7 @@
         ],
         "version": 1,
         "internalName": "Phimmoichill",
-        "url": "https://raw.githubusercontent.com/stealer-smile/extension/builds-2/Phimmoichill.cs3",
+        "url": "https://raw.githubusercontent.com/stealer-smile/nguon-cs3/builds-2/Phimmoichill.cs3",
         "name": "Phimmoichill"
     },
     {
@@ -193,7 +193,7 @@
         "version": 2,
         "internalName": "StreamPlay",
         "description": "#1 best extention based on MultiAPI",
-        "url": "https://raw.githubusercontent.com/stealer-smile/extension/builds-2/StreamPlay.cs3",
+        "url": "https://raw.githubusercontent.com/stealer-smile/nguon-cs3/builds-2/StreamPlay.cs3",
         "name": "StreamPlay"
     }
 ]
