@@ -16,7 +16,7 @@
         ],
         "version": 2,
         "internalName": "AnimeHay",
-        "url": "https://raw.githubusercontent.com/stealer-smile/extension/builds/AnimeHay.cs3",
+        "url": "https://raw.githubusercontent.com/stealer-smile/nguon-cs3/builds/AnimeHay.cs3",
         "name": "AnimeHay"
     },
     {
@@ -35,7 +35,7 @@
         ],
         "version": 3,
         "internalName": "HHPanda",
-        "url": "https://raw.githubusercontent.com/stealer-smile/extension/builds/HHPanda.cs3",
+        "url": "https://raw.githubusercontent.com/stealer-smile/nguon-cs3/builds/HHPanda.cs3",
         "name": "HHPanda"
     },
     {
@@ -54,7 +54,7 @@
         "version": 3,
         "internalName": "IPTVPlayer",
         "description": "Truyen Hinh VTV",
-        "url": "https://raw.githubusercontent.com/stealer-smile/extension/builds/IPTVPlayer.cs3",
+        "url": "https://raw.githubusercontent.com/stealer-smile/nguon-cs3/builds/IPTVPlayer.cs3",
         "name": "IPTVPlayer"
     },
     {
@@ -73,7 +73,7 @@
         ],
         "version": 2,
         "internalName": "Motchilltv",
-        "url": "https://raw.githubusercontent.com/stealer-smile/extension/builds/Motchilltv.cs3",
+        "url": "https://raw.githubusercontent.com/stealer-smile/nguon-cs3/builds/Motchilltv.cs3",
         "name": "Motchilltv"
     },
     {
@@ -92,7 +92,7 @@
         ],
         "version": 1,
         "internalName": "NguonC",
-        "url": "https://raw.githubusercontent.com/stealer-smile/extension/builds/NguonC.cs3",
+        "url": "https://raw.githubusercontent.com/stealer-smile/nguon-cs3/builds/NguonC.cs3",
         "name": "NguonC"
     },
     {
@@ -111,7 +111,7 @@
         ],
         "version": 3,
         "internalName": "OPhim",
-        "url": "https://raw.githubusercontent.com/stealer-smile/extension/builds/OPhim.cs3",
+        "url": "https://raw.githubusercontent.com/stealer-smile/nguon-cs3/builds/OPhim.cs3",
         "name": "OPhim"
     },
     {
@@ -132,7 +132,7 @@
         ],
         "version": 1,
         "internalName": "Phimmoichill",
-        "url": "https://raw.githubusercontent.com/stealer-smile/extension/builds/Phimmoichill.cs3",
+        "url": "https://raw.githubusercontent.com/stealer-smile/nguon-cs3/builds/Phimmoichill.cs3",
         "name": "Phimmoichill"
     }
 ]
